@@ -1,0 +1,36 @@
+name: ZenithSkyPvP
+version: 2.2.0
+main: me.zenith.skypvp.ZenithSkyPvP
+author: Zenith
+description: Complete Zenith SkyPvP network core for Spigot 1.8.9
+softdepend: [RankSystem, Essentials, EssentialsSpawn, ViaVersion]
+commands:
+  zenith:
+    description: Main Zenith SkyPvP command
+    usage: /zenith help
+    aliases: [zsp]
+  kit:
+    description: Open the Zenith kit menu
+  shop:
+    description: Open the Zenith shop
+  crates:
+    description: Open the Zenith crate menu
+  coins:
+    description: Check or manage Zenith coins
+  stats:
+    description: Check SkyPvP statistics
+  daily:
+    description: Claim your daily reward
+  top:
+    description: View Zenith leaderboards
+permissions:
+  zenith.admin:
+    default: op
+  zenith.bypass:
+    default: op
+  zenith.kit.vip:
+    default: false
+  zenith.kit.mvp:
+    default: false
+  zenith.kit.elite:
+    default: false

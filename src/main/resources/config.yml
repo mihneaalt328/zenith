@@ -1,0 +1,117 @@
+server:
+  name: "&b&lZENITH &fSkyPvP"
+  ip: "&bskypvp.zenithmc.net"
+  pvp: true
+  combat-tag-seconds: 10
+  void-y: 0
+  protect-spawn-radius: 18
+  spawn-managed-by: "EssentialsX"
+
+# ZENITH never owns /spawn. EssentialsX/EssentialsSpawn owns /setspawn and /spawn.
+# Protection uses the Bukkit world spawn, which should be the Essentials spawn.
+
+scoreboard:
+  enabled: true
+  title: "&b&lZENITH"
+  update-seconds: 2
+  lines:
+    - "&8&m----------------"
+    - "&fRank &8» &b{rank}"
+    - "&fOnline &8» &a{online}&7/&a{max}"
+    - "&fCoins &8» &e{coins}"
+    - "&fKills &8» &a{kills}"
+    - "&fDeaths &8» &c{deaths}"
+    - "&fStreak &8» &6{streak}"
+    - "&fBest &8» &6{best}"
+    - "&8"
+    - "&bskypvp.zenithmc.net"
+    - "&8&m----------------"
+
+tab:
+  enabled: true
+  team-prefix-enabled: true
+  header:
+    - "&8&m-------------------------------"
+    - "&b&lZENITH SKYPVP"
+    - "&7Welcome to the &bSkyPvP &7server!"
+    - "&fOnline: &a{online}&7/&a{max}"
+    - "&8"
+  footer:
+    - "&8"
+    - "&7Store &8» &bstore.zenithmc.net"
+    - "&7Server &8» &bskypvp.zenithmc.net"
+    - "&8&m-------------------------------"
+  team-format: "{prefix}&f{player}"
+  team-sort-by-rank: true
+
+chat:
+  format: "{prefix}&f{player} &8» &f{message}"
+
+auto-messages:
+  enabled: true
+  interval-seconds: 90
+  messages:
+    - "&b&lZENITH &8» &7Visit our store at &bstore.zenithmc.net&7."
+    - "&b&lZENITH &8» &7Use &b/kit &7to view available kits."
+    - "&b&lZENITH &8» &7Check your progress with &b/stats&7."
+    - "&b&lZENITH &8» &7Climb the leaderboards with &b/top&7."
+
+combat:
+  block-commands: true
+  allowed-commands:
+    - "/stats"
+    - "/coins"
+    - "/kit"
+    - "/shop"
+    - "/crates"
+    - "/daily"
+    - "/top"
+
+coins:
+  kill: 50
+  death-loss: 0
+  killstreak-5: 150
+  killstreak-10: 300
+  killstreak-20: 750
+  daily: 500
+
+daily:
+  cooldown-seconds: 86400
+
+kits:
+  Starter:
+    permission: ""
+    cooldown: 86400
+    items: ["STONE_SWORD:1", "BOW:1", "ARROW:16", "COOKED_BEEF:16", "IRON_HELMET:1", "IRON_CHESTPLATE:1", "IRON_LEGGINGS:1", "IRON_BOOTS:1"]
+  VIP:
+    permission: "zenith.kit.vip"
+    cooldown: 86400
+    items: ["IRON_SWORD:1", "BOW:1", "ARROW:32", "GOLDEN_APPLE:2", "IRON_HELMET:1", "IRON_CHESTPLATE:1", "IRON_LEGGINGS:1", "IRON_BOOTS:1"]
+  MVP:
+    permission: "zenith.kit.mvp"
+    cooldown: 86400
+    items: ["DIAMOND_SWORD:1", "BOW:1", "ARROW:48", "GOLDEN_APPLE:4", "DIAMOND_HELMET:1", "DIAMOND_CHESTPLATE:1", "DIAMOND_LEGGINGS:1", "DIAMOND_BOOTS:1"]
+  Elite:
+    permission: "zenith.kit.elite"
+    cooldown: 86400
+    items: ["DIAMOND_SWORD:1", "BOW:1", "ARROW:64", "GOLDEN_APPLE:8", "DIAMOND_HELMET:1", "DIAMOND_CHESTPLATE:1", "DIAMOND_LEGGINGS:1", "DIAMOND_BOOTS:1"]
+
+shop:
+  items:
+    iron_sword: {material: "IRON_SWORD", price: 500, amount: 1, name: "&fIron Sword"}
+    diamond_sword: {material: "DIAMOND_SWORD", price: 2500, amount: 1, name: "&bDiamond Sword"}
+    golden_apple: {material: "GOLDEN_APPLE", price: 1500, amount: 2, name: "&6Golden Apples"}
+    ender_pearl: {material: "ENDER_PEARL", price: 800, amount: 4, name: "&5Ender Pearls"}
+    steak: {material: "COOKED_BEEF", price: 100, amount: 16, name: "&6Steak"}
+    arrows: {material: "ARROW", price: 100, amount: 32, name: "&7Arrows"}
+
+crates:
+  Vote:
+    key-name: "&aVote Crate Key"
+    rewards: ["COINS:250:50", "COINS:500:25", "GOLDEN_APPLE:2:15", "DIAMOND:2:10"]
+  Legendary:
+    key-name: "&6Legendary Crate Key"
+    rewards: ["COINS:1000:35", "DIAMOND_SWORD:1:20", "GOLDEN_APPLE:8:20", "DIAMOND:8:15", "EMERALD:16:10"]
+  Zenith:
+    key-name: "&b&lZenith Crate Key"
+    rewards: ["COINS:2500:35", "DIAMOND_SWORD:1:20", "GOLDEN_APPLE:16:20", "DIAMOND:16:15", "EMERALD:32:10"]
