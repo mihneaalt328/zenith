@@ -12,7 +12,7 @@
     <version>2.2.0</version>
 
     <name>ZenithSkyPvP</name>
-    <description>Complete SkyPvP plugin for Spigot 1.8.9</description>
+    <description>ZENITH SkyPvP - Spigot 1.8.9</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,6 +29,7 @@
 
     <dependencies>
 
+        <!-- Spigot 1.8.8 / 1.8.9 API -->
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
@@ -39,10 +40,12 @@
     </dependencies>
 
     <build>
+
         <finalName>ZenithSkyPvP-2.2.0</finalName>
 
         <plugins>
 
+            <!-- Java 8 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -50,27 +53,12 @@
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
+                    <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-                        <configuration>
-                            <createDependencyReducedPom>false</createDependencyReducedPom>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
         </plugins>
+
     </build>
 
 </project>
